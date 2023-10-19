@@ -15,9 +15,10 @@ const productTitle = document.querySelector["#title"];
 const productPrice = document.querySelector["#price"];
 const productDescription = document.querySelector["#description"];
 const productColor = document.querySelector["#color"];
-const productQuantity = document.querySelector('#quantity') //['#quanity']
+const productQuantity = document.querySelector['#quantity'] //['#quanity']
 
-function displayProductDetails (productDataFromServer){ //to properly define the function. [productDataFromServer]{
+function displayProductDetails (productDataFromServer) { 
+    //to properly define the function. [productDataFromServer]{
     for (product of productDataFromServer){
         if(id===product._id)
         {
@@ -54,7 +55,7 @@ function addProductToCart(){
         imageUrl: product.imageUrl,
         altTxt: product.altTxt,
     };
-    let cartParse = JSON.parse(localStorage.getItem('cart'));                //let cartParse = json.parse(localStorage.getItem('cart'));
+    let cartParse = json.parse(localStorage.getItem('cart'));                //let cartParse = json.parse(localStorage.getItem('cart'));
     let push = true; 
     if (productQuantity.value == 0 || productColor.value === "" )
 {
